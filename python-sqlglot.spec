@@ -17,4 +17,3 @@ An easily customizable SQL parser and transpiler.
 
 %files
 %{py_sitedir}/*
-%{_bindir}/*
