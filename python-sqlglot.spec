@@ -1,6 +1,6 @@
 Name:		python-sqlglot
 Version:	30.20.0
-Release:	1
+Release:	2
 Summary:	An easily customizable SQL parser and transpiler
 License:	MIT
 Group:		Development/Python
@@ -14,6 +14,10 @@ BuildRequires:	python%{pyver}dist(setuptools-scm)
 BuildArch:	noarch
 %description
 An easily customizable SQL parser and transpiler.
+
+%build -p
+# The sdist is not a git checkout, so the versioning backend needs the version.
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 
 %files
 %{py_sitedir}/*
